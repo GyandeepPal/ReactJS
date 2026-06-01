@@ -75,49 +75,97 @@
 
 // export default Form
 
-import React, { useEffect, useState } from 'react'
-import './App.css'
-const Form = () => {
+// import React, { useEffect, useState } from 'react'
+// import './App.css'
+// const Form = () => {
 
-  let [ApiData, SetApidata] = useState([])
-  let [city, SetCity] = useState("goa")
+//   let [ApiData, SetApidata] = useState([])
+//   let [city, SetCity] = useState("goa")
 
-  useEffect(() => {
+//   useEffect(() => {
 
-    async function name() {
-      let reds = await fetch('https://dummyjson.com/products')
-      let data = await reds.json()
+//     async function name() {
+//       let reds = await fetch('https://dummyjson.com/products')
+//       let data = await reds.json()
 
-      console.log(data)
-      SetApidata(data.products)
-    }
+//       console.log(data)
+//       SetApidata(data.products)
+//     }
 
-    name()
+//     name()
 
-  }, [])
+//   }, [])
 
-  function fun1(q) {
-    Setcount(count + 1)
-  }
+//   function fun1(q) {
+//     Setcount(count + 1)
+//   }
 
-  return (
+//   return (
     
-    <div id = "parent">
-     {
-      ApiData.map((a)=>{
-        return(
-          <div id="card">
-            <h2>{a.id}</h2>
-            <h6>{a.title}</h6>
-            <h2>{a.userId}</h2>
-            <img src={a.thumbnail} />
-            </div>
-        )
-      })
-     }
+//     <div id = "parent">
+//      {
+//       ApiData.map((a)=>{
+//         return(
+//           <div id="card">
+//             <h2>{a.id}</h2>
+//             <h6>{a.title}</h6>
+//             <h2>{a.userId}</h2>
+//             <img src={a.thumbnail} />
+//             </div>
+//         )
+//       })
+//      }
      
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Form
+// export default Form
+
+
+
+// Example: "Create a search bar to allow users to search for products by name. Ensure the search field cannot be empty."
+
+// import React, { useState } from "react";
+
+// const Form = () => {
+//   const [search, setSearch] = useState("");
+//   const [products, setProducts] = useState([]);
+
+//   async function Api() {
+//     if (!search.trim()) {
+//       alert("Search field cannot be empty");
+//       return;
+//     }
+
+//     const res = await fetch(
+//       `https://dummyjson.com/products/search?q=${search}`
+//     );
+
+//     const data = await res.json();
+//     setProducts(data.products);
+//   }
+
+//   return (
+//     <div>
+//       <input
+//         type="text"
+//         placeholder="Products"
+//         value={search}
+//         onChange={(e) => setSearch(e.target.value)}
+//       />
+
+//       <button onClick={Api}>Search</button>
+
+//       {products.map((item) => (
+//         <div key={item.id}>
+//           <h3>{item.title}</h3>
+//           // <p>₹{item.price}</p>
+         
+//         </div>
+//         ))} 
+//      </div>
+//    );
+// };
+
+// export default Form;
