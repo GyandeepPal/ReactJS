@@ -122,25 +122,39 @@
 // export default App
 
 
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Navbar from './Navbar'
-import Home from './Home'
+// import React from 'react'
+// import { Routes, Route } from 'react-router-dom'
+// import Navbar from './Navbar'
+// import Home from './Home'
+// // import About from './About'
+// import Contact from './Contact'
+// import './App.css'
 // import About from './About'
-import Contact from './Contact'
-import './App.css'
-import About from './About'
 
+// const App = () => {
+//   return (
+//     <>
+//       <Navbar />
+//       <Routes>
+//         <Route path="/Home" element={<Home />} />
+//         <Route path="/products" element={<About/>} />
+//         <Route path="/assignment" element={<Contact/>} />
+//       </Routes>
+//     </>
+//   )
+// }
+
+// export default App
+
+
+import React from 'react'
+import ToDo from './ToDo'
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/Home" element={<Home />} />
-        <Route path="/products" element={<About/>} />
-        <Route path="/assignment" element={<Contact/>} />
-      </Routes>
-    </>
+    <div>
+      <ToDo/>
+      
+    </div>
   )
 }
 
