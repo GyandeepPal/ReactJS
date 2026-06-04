@@ -1,20 +1,47 @@
-import React, { useEffect, useState } from 'react'
-import './App.css'
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
 const ToDo = () => {
-  const [task, setTask] = useState("")
-  const [todos, setTodos] = useState(()=>{
-    let data =localStorage.getItem("key")
-    if(data){
-        return JSON.parse(data)
+  const [task, setTask] = useState("");
+  const [editIndex, setEditIndex] = useState(null);
+
+  const [todos, setTodos] = useState(() => {
+    const data = localStorage.getItem("key");
+    return data ? JSON.parse(data) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("key", JSON.stringify(todos));
+  }, [todos]);
+
+  const handleSubmit = () => {
+    if (task.trim() === "") return;
+
+    if (editIndex !== null) {
+      const updatedTodos = [...todos];
+      updatedTodos[editIndex] = task;
+
+      setTodos(updatedTodos);
+      setEditIndex(null);
+    } else {
+      setTodos([...todos, task]);
     }
-  })
- useEffect(()=>{
-    localStorage.setItem("key",JSON.stringify(todos))
- },[todos])
+
+    setTask("");
+  };
+
+  const handleDelete = (index) => {
+    setTodos(todos.filter((_, i) => i !== index));
+  };
+
+  const handleEdit = (index) => {
+    setTask(todos[index]);
+    setEditIndex(index);
+  };
+
   return (
-    <div className="container">
-      <h1>Todo List</h1>
+    <div id="new">
+      <h1>ToDo List</h1>
 
       <div className="input-box">
         <input
@@ -24,15 +51,8 @@ const ToDo = () => {
           onChange={(e) => setTask(e.target.value)}
         />
 
-        <button
-          onClick={() => {
-            if (task.trim() !== "") {
-              setTodos([...todos, task])
-              setTask("")
-            }
-          }}
-        >
-          Add
+        <button onClick={handleSubmit}>
+          {editIndex !== null ? "Update" : "Add"}
         </button>
       </div>
 
@@ -42,12 +62,11 @@ const ToDo = () => {
             <span>{todo}</span>
 
             <div className="actions">
-              <button>Edit</button>
-              <button
-                onClick={() =>
-                  setTodos(todos.filter((_, i) => i !== index))
-                }
-              >
+              <button onClick={() => handleEdit(index)}>
+                Edit
+              </button>
+
+              <button onClick={() => handleDelete(index)}>
                 Delete
               </button>
             </div>
@@ -55,7 +74,7 @@ const ToDo = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ToDo
+export default ToDo;
