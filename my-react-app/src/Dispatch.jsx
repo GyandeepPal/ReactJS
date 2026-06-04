@@ -21,6 +21,7 @@ const ToDo = () => {
 
   return (
     <div id="main">
+      
       <h1>{state}</h1>
 <div>
       <button onClick={() => dispatch({ type: "inc" })}>++</button>

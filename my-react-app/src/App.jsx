@@ -148,7 +148,7 @@
 
 
 import React from 'react'
-import ToDo from './Dispatch'
+import ToDo from './Counter'
 const App = () => {
   return (
     <div>
