@@ -148,12 +148,15 @@
 
 
 import React from 'react'
-import ToDo from './Counter'
+import Counter from './Counter'
+import Dispatch from './Dispatch'
+// import Counter from './Counter'
 const App = () => {
   return (
     <div>
-      <ToDo/>
-      
+      {/* <Counter/> */}
+      {/* <ToDo/> */}
+      <Dispatch/>
     </div>
   )
 }

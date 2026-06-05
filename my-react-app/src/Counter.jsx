@@ -15,7 +15,6 @@ const Counter = () => {
     const[state,dispatch]=useReducer(reducer,0)
   return (
     <div id='main'>
-
       <h1>Let`s do it</h1>
         <h3>{state}</h3>
     
@@ -38,4 +37,4 @@ const Counter = () => {
   )
 }
 
-export default Counter
+export default Counter;
