@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from "./Home"
 import Cart from "./Cart"
-import NavBar from "./NavBar"
+import NavBar from "./Navbar"
 import { useState } from "react"
 import { Route, Routes } from "react-router-dom"
 

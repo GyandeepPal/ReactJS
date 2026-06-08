@@ -7,8 +7,7 @@ const Cart = ({cart}) => {
         cart.map((a)=>{
           return(<div id='main_card'>
           <img   src={a.thumbnail}/>
-          {/* <h4>{a.title}</h4>
-          <h6>{a.price}</h6> */}
+          
 
           </div>)
         })
