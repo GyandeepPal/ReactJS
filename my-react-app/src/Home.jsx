@@ -37,35 +37,57 @@
 
 // export default Home;
 
-import React, { useEffect } from 'react'
-import './App.css'
-const Home = ({apiData , SetApiData,Cart,SetCart} )=> {
-    useEffect(() =>{
-       async function apiCall(){
-        let res= await fetch("https://dummyjson.com/products")
-        let data=await res.json()
-        console.log(data);
+
+
+
+
+
+
+
+
+
+// import React, { useEffect } from 'react'
+// import './App.css'
+// const Home = ({apiData , SetApiData,Cart,SetCart} )=> {
+//     useEffect(() =>{
+//        async function apiCall(){
+//         let res= await fetch("https://dummyjson.com/products")
+//         let data=await res.json()
+//         console.log(data);
         
-        SetApiData(data.products)
-      }
-      apiCall()
-      },[])
+//         SetApiData(data.products)
+//       }
+//       apiCall()
+//       },[])
       
     
-  return (
-    <div id ='card'>
-  {apiData.map((a) => (
-    <div id="main_card" key={a.id}>
-      <img src={a.thumbnail} alt={a.title} />
-      {/* <h3>{a.title}</h3>
-      <h3>₹{a.price}</h3> */}
+//   return (
+//     <div id ='card'>
+//   {apiData.map((a) => (
+//     <div id="main_card" key={a.id}>
+//       <img src={a.thumbnail} alt={a.title} />
+//       {/* <h3>{a.title}</h3>
+//       <h3>₹{a.price}</h3> */}
 
-     <button onClick={() => SetCart((prev) => [...prev, a])}>Add To Cart</button>
+//      <button onClick={() => SetCart((prev) => [...prev, a])}>Add To Cart</button>
 
-    </div>
-  ))}
+//     </div>
+//   ))}
   
-</div>
+// </div>
+//   )
+// }
+// export default Home
+
+
+
+
+import React from 'react'
+
+const Home = () => {
+  return (
+    <div>Home</div>
   )
 }
+
 export default Home
