@@ -27,11 +27,12 @@
 // export default App
 
 
-import NextToDo from "./NextToDo"
+import UseState from "./UseState"
+import NextToDo from "./Weather"
 const App = () => {
   return (
     <div>
-      < NextToDo/>
+     <UseState/>
     </div>
   )
 }

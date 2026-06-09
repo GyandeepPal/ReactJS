@@ -6,30 +6,13 @@ const Wheather = () => {
   const [weather, setWeather] = useState(null);
   const [aqi, setAQI] = useState(null);
   const API_KEY = "e1c27904a6c435faaf0c74a11641fa97";
-const cities = [
-"Delhi","Mumbai","Kolkata","Chennai","Bengaluru","Hyderabad","Pune","Ahmedabad",
-"Surat","Jaipur","Lucknow","Kanpur","Nagpur","Indore","Thane","Bhopal",
-"Visakhapatnam","Patna","Vadodara","Ghaziabad","Ludhiana","Agra","Nashik",
-"Faridabad","Meerut","Rajkot","Varanasi","Allahabad","Srinagar","Aurangabad","Dhanbad",
-"Amritsar","Allahabad","Ranchi","Howrah","Coimbatore","Jabalpur","Gwalior",
-"Vijayawada","Jodhpur","Madurai","Raipur","Kota","Guwahati","Chandigarh",
-"Solapur","Hubli","Mysuru","Tiruchirappalli","Bareilly","Aligarh","Moradabad",
-"Jalandhar","Bhubaneswar","Salem","Warangal","Guntur","Bhiwandi","Saharanpur",
-"Gorakhpur","Bikaner","Amravati","Noida","Jamshedpur","Bhilai","Cuttack",
-"Firozabad","Kochi","Nellore","Bhavnagar","Dehradun","Durgapur","Asansol",
-"Rourkela","Nanded","Kolhapur","Ajmer","Akola","Gulbarga","Jamnagar",
-"Ujjain","Loni","Siliguri","Jhansi","Ulhasnagar","Jammu","Sangli",
-"Mangalore","Erode","Belgaum","Ambattur","Tirunelveli","Malegaon",
-"Gaya","Jalgaon","Udaipur","Maheshtala","Davanagere","Kozhikode"
-];
-  
+
 
   const getWeather = async () => {
   if (!City) return;
 
   try {
-    const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${API_KEY}&units=metric`
+    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${API_KEY}&units=metric`
     );
 
     const data = await res.json();
@@ -60,7 +43,7 @@ const cities = [
   return (
     <div id="main">
       <h1> Weather App</h1>
-
+    {/* <h3>{weather}</h3> */}
       <input
         type="text"
         placeholder="Enter City Name"
@@ -80,23 +63,18 @@ const cities = [
 
           <h3> Condition: {weather.weather[0].main}</h3>
 
-          <h3>
-             AQI: {aqi} -
-            {["", "Good", "Fair", "Moderate", "Poor", "Very Poor"][aqi]}
-          </h3>
+          <h3>AQI: {aqi} - {["", "Good", "Fair", "Moderate", "Poor", "Very Poor"][aqi]} </h3>
 
           <h3> Wind Speed: {weather.wind.speed} m/s</h3>
           
-        <h3>
-          Visibility: {weather.visibility >= 10000
-            ? "10+ km"
-            : `${weather.visibility / 1000} km`}
-        </h3>
+        <h3> Visibility: {weather.visibility >= 10000? "10+ km" : `${weather.visibility / 1000} km`}</h3>
 
         <h3> Wind Gust: {weather.wind.gust} m/s</h3>
 
 
-        <h3> Wind Direction: {weather.wind.deg}°</h3>
+        <h3> Wind Direction: {weather.wind.deg}</h3>
+
+
         </div>
       )}
     </div>

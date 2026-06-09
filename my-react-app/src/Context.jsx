@@ -1,4 +1,9 @@
-import { createContext } from "react";
-export const storContext
-let context= createContext()
-export default context;
+import React from 'react'
+
+const Context = () => {
+  return (
+    <div>Context</div>
+  )
+}
+
+export default Context
