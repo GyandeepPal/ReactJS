@@ -27,12 +27,69 @@
 // export default App
 
 
-import UseState from "./UseState"
-import NextToDo from "./Weather"
+
+// import React, { useContext } from "react";
+// import { storeContext } from "./Context";
+
+// const App = () => {
+//   const { store, dispatch } = useContext(storeContext);
+
+//   return (
+//     <div>
+//       <h1>Todo App</h1>
+
+//       <input
+//         type="text"
+//         value={store.input}
+//         onChange={(e) =>
+//           dispatch({
+//             type: "SET_INPUT",
+//             payload: e.target.value,
+//           })
+//         }
+//       />
+
+//       <button
+//         onClick={() =>
+//           dispatch({
+//             type: "ADD_TODO",
+//           })
+//         }
+//       >
+//         Add Todo
+//       </button>
+
+//       {store.todos.map((todo, index) => (
+//         <div key={index}>
+//           <h3>{todo}</h3>
+
+//           <button
+//             onClick={() =>
+//               dispatch({
+//                 type: "DELETE_TODO",
+//                 payload: index,
+//               })
+//             }
+//           >
+//             Delete
+//           </button>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+
+import React from 'react'
+import Onchange from './Onchange'
+
 const App = () => {
   return (
     <div>
-     <UseState/>
+      <Onchange/>
     </div>
   )
 }
