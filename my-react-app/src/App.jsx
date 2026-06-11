@@ -83,15 +83,69 @@
 
 
 
-import React from 'react'
-import Onchange from './Onchange'
+// import React from 'react'
+// import Onchange from './Onchange'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Onchange/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// import React from 'react';
+// import useCounter from './useCounter';
+// import './App.css'
+// const App = () => {
+//   const { count, inc, dec, reset } = useCounter(0);
+//   let res=0
+//   function call(){
+//     for( let i=0; i<10000;i++){
+//     res=i
+//   }
+  
+//   return res
+  
+// }
+// let total= call()
+//   return (
+//     <div>
+//       <h2>{count}</h2>
+//       <button onClick={inc}>✚</button>
+//    <M/> </div>
+//   );
+// };
+// const M=mero(function(){
+// console.log("hello");
+
+// })
+// export default App;
+
+
+
+import React, { memo, useState } from 'react'
 
 const App = () => {
+let [count,SetCount]=  useState(0)
   return (
+
     <div>
-      <Onchange/>
+      <h2>{count}</h2>
+      <button onClick={()=>SetCount(count+1)}>add</button>
+      <M/>
     </div>
   )
 }
+
+
+let M=memo(function child(){
+  console.log("hello");
+  
+})
 
 export default App
