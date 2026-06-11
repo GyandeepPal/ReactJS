@@ -98,54 +98,52 @@
 
 
 
-// import React from 'react';
-// import useCounter from './useCounter';
+
+
+
+// import React, { memo, useState } from 'react'
 // import './App.css'
 // const App = () => {
-//   const { count, inc, dec, reset } = useCounter(0);
-//   let res=0
-//   function call(){
-//     for( let i=0; i<10000;i++){
-//     res=i
-//   }
-  
-//   return res
-  
-// }
-// let total= call()
+// let [count,SetCount]=  useState(0)
 //   return (
+
 //     <div>
 //       <h2>{count}</h2>
-//       <button onClick={inc}>✚</button>
-//    <M/> </div>
-//   );
-// };
-// const M=mero(function(){
-// console.log("hello");
+//       <button onClick={()=>SetCount(count+1)}>add</button>
+//       <button onClick={()=>SetCount(count-1)}>dec</button>
+//       <M/>
+//     </div>
+//   )
+// }
 
+
+// let M=memo(function child(){
+//   console.log("hello");
+  
 // })
-// export default App;
+
+// export default App
 
 
-
-import React, { memo, useState } from 'react'
-
+import React, { memo,useState } from 'react'
+import './App.css'
 const App = () => {
-let [count,SetCount]=  useState(0)
+ const[count,setCount]=useState(0)
   return (
-
     <div>
-      <h2>{count}</h2>
-      <button onClick={()=>SetCount(count+1)}>add</button>
+      <h1>Hello 👉🏻 {count}</h1>
+      <button onClick={()=>setCount(count+2)}>Add</button>
+      <button onClick={()=>setCount(count -2)}>Sub</button>
+      <button onClick={()=>setCount(0)}>reset</button>
+
       <M/>
     </div>
   )
 }
-
-
 let M=memo(function child(){
-  console.log("hello");
-  
+console.log("Hii🎶");
+
 })
+
 
 export default App
