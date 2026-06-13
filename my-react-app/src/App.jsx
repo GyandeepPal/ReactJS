@@ -217,12 +217,17 @@
 import React from 'react'
 
 
-import NewsCard from './NewsCard'
+
+import Practics_useState from './Practics_useState'
+
 const App = () => {
   return (
+    <> 
+   
     <div>
-      <NewsCard/>
+      <Practics_useState/>
     </div>
+    </>
   )
 }
 

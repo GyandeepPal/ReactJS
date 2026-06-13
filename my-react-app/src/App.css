@@ -90,6 +90,11 @@ button:nth-child(4) {
   justify-content: center;
   justify-content: space-around;
 } */
+
+
+
+
+/* 
 *{
     margin:0;
     padding:0;
@@ -106,7 +111,7 @@ button:nth-child(4) {
 
 .news-card{
     width:500px;
-    aspect-ratio:1/1;      /* Instagram square post */
+    aspect-ratio:1/1;      
     background:#fff;
     border-radius:30px;
     padding:40px;
@@ -143,4 +148,80 @@ button:nth-child(4) {
     font-size:15px;
     border-top:1px solid #e5e5e5;
     padding-top:20px;
+} */
+
+
+*{
+margin: auto;
+padding: 19px;
+box-sizing: border-box;
+}
+
+
+#Main{
+  justify-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  height: 500px;
+  width: 380px;
+  background-color: rgb(216, 127, 18);
+  box-shadow: 29px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15),0 20px 50px rgba(0,0,0,.1);
+        
+}
+
+.one{
+background-color: aqua;
+border-radius: 30px;
+justify-items: center;
+margin: 12px;
+padding: 30px;
+width: 80px;
+
+}
+.two{
+  background-color: aquamarine;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 12px;
+  width: 80px;
+
+
+}
+.three{
+background-color: rgb(175, 146, 203);
+border-radius: 30px;
+padding: 30px;
+width: 80px;
+margin: 22px;
+
+
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:nth-child(2) {
+  background: #22c55e;
+  width: 80px;
+  color: white;
+}
+
+button:nth-child(3) {
+  background: #ef4444;
+  width: 80px;
+  color: white;
+}
+
+button:nth-child(4) {
+  background: #f59e0b;
+  color: white;
+  width: 80px;
+  border-radius: 90px;
+  font-size: 1rem;
 }
