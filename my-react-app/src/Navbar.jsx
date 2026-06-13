@@ -4,11 +4,10 @@ import './App.css'
 
 const Navbar = () => {
   return (
-    <nav>
-      <Link to={"/Home"}>Home</Link>
-      <Link to={"/products"}>About</Link>
-      {/* <Link to="/App">App</Link> */}
-       <Link  to={"/cart"}>  <li>Cart</li> </Link>
+    <nav id="nav">
+      <Link to="/">Home</Link>
+      <Link to="/About">About</Link>
+      <Link to="/Cart">Cart</Link>
     </nav>
   )
 }
