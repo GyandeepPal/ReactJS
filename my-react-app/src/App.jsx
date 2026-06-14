@@ -215,17 +215,14 @@
 
 
 import React from 'react'
-
-
-
-import Practics_useState from './Practics_useState'
+import Rerendring from './Rerendring'
 
 const App = () => {
   return (
     <> 
    
     <div>
-      <Practics_useState/>
+    <Rerendring/>
     </div>
     </>
   )
