@@ -215,14 +215,21 @@
 
 
 import React from 'react'
-import Rerendring from './Rerendring'
-
+import UserList from './UserList'
+import { Route, Routes } from "react-router-dom"
+import UserProfile from "./UserProfile"
 const App = () => {
   return (
     <> 
    
     <div>
-    <Rerendring/>
+   
+   
+      <Routes>
+        <Route   path="/"   element={ <UserList/>}/>
+        <Route   path="/profile/:id"   element={ <UserProfile/>}/>
+
+      </Routes>
     </div>
     </>
   )
