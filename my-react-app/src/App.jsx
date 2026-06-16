@@ -212,27 +212,17 @@
 // }
 
 // export default App
+import "./App.css";
 
+import Home from "./Home";
 
-import React from 'react'
-import UserList from './UserList'
-import { Route, Routes } from "react-router-dom"
-import UserProfile from "./UserProfile"
 const App = () => {
   return (
-    <> 
-   
     <div>
-   
-   
-      <Routes>
-        <Route   path="/"   element={ <UserList/>}/>
-        <Route   path="/profile/:id"   element={ <UserProfile/>}/>
-
-      </Routes>
+      <h1>🛒 My E-Commerce Store</h1>
+      <Home />
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

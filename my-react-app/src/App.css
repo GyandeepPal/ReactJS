@@ -225,3 +225,33 @@ button:nth-child(4) {
   border-radius: 90px;
   font-size: 1rem;
 } */
+
+
+
+
+
+
+
+
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+
+.card{
+  width:220px;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 0 10px gray;
+  text-align:center;
+}
+
+button{
+  padding:10px 20px;
+  border:none;
+  background:black;
+  color:white;
+  cursor:pointer;
+}

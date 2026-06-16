@@ -13,7 +13,7 @@ const UserList = () => {
     <div>
       {list.map((data, id) => (
         <div key={id}>
-          <h2>{data}</h2>
+          <h2 className='bg-green-900'>{data}</h2>
           <button onClick={() => fun1(id)}>
             Show
           </button>

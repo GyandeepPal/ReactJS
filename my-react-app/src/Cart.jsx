@@ -20,14 +20,17 @@
 
 
 import React from 'react'
-
-const Cart = () => {
+import {inr} from './data'
+const Cart = ({product}) => {
   return (
-    <div>
+    <div className='card'>
 
-      
-      If I am not wrong
-
+      <h1>{product.emoji}</h1>
+      <h3>{product.title}</h3>
+      <p>{product.category}</p>
+      <h4>{inr(product.price)}</h4>
+      <p>⭐ {product.rating}</p>
+    <button>Add To Card</button>
     </div>
   )
 }

@@ -59,8 +59,7 @@
 //       }
 //       apiCall()
 //       },[])
-      
-    
+ 
 //   return (
 //     <div id ='card'>
 //   {apiData.map((a) => (
@@ -78,39 +77,29 @@
 //   )
 // }
 // export default Home
-
-
-
-
-
-
-
-// import { StrictMode } from 'react';
-// import { createRoot } from 'react-dom/client';
-// import App from './App.jsx';
-// import Context from './Context.jsx';
-// import { BrowserRouter } from 'react-router-dom';
-
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <BrowserRouter>
-//       <Context>
-//         <App />
-//       </Context>
-//     </BrowserRouter>
-//   </StrictMode>
-// );
-
-
-import React from 'react'
+import React, { useEffect, useState } from "react";
 
 const Home = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((response) => response.json())
+      .then((data) => setProducts(data));
+  }, []);
+
   return (
-    <div>
-
-      My name is gyan
+    <div className="container">
+      {products.map((product) => (
+        <div className="card" key={product.id}>
+          <img src={product.image} width="150" />
+          <h3>{product.title}</h3>
+          <p>₹{product.price}</p>
+          <button>Add To Cart</button>
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
