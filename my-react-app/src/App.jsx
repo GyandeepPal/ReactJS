@@ -213,14 +213,14 @@
 
 // export default App
 import "./App.css";
+import CustomFunction from "./CustomFunction";
 
-import Home from "./Home";
+
 
 const App = () => {
   return (
     <div>
-      <h1>🛒 My E-Commerce Store</h1>
-      <Home />
+      <CustomFunction/>
     </div>
   );
 };
