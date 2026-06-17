@@ -79,24 +79,46 @@
 // export default CustomFunction
 
 
+// import React from 'react'
+
+// const CustomFunction = () => {
+//     Array.prototype.Rahul=function(cd,initialData=0){
+//         let sum=initialData
+//         for(let i=0;i<this.length;i++){
+//             sum=cd(sum,this[i])
+//         }
+//     return sum
+//     }
+// let arr =[1,2,34,5,5]
+// let data=arr.Rahul((a,b,c,d)=>{
+//     return a+b
+// })
+// console.log(data);
+
+//   return (
+//     <div>CustomFunction</div>
+//   )
+// }
+
+// export default CustomFunction
+
+
 import React from 'react'
 
 const CustomFunction = () => {
-    Array.prototype.Rahul=function(cd,initialData=0){
+    Array.prototype.RAM=function(cd,initialData){
         let sum=initialData
-        for(let i=0;i<this.length;i++){
-            sum=cd(sum,this[i])
-
+        for (let i=0;i<this.length;i++){
+            sum=cd(sum,this[i], i, this)
         }
-    return sum
+        return sum
     }
-
-let arr =[1,2,34,5,5]
-let data=arr.Rahul((a,b,c,d)=>{
-    return a+b
-})
-console.log(data);
-
+    let arr=[12,3,45,34,]
+    let data =arr.RAM((a,b,c,d)=>{
+        return a+b+c+d
+    },1)
+    console.log(data);
+    
   return (
     <div>CustomFunction</div>
   )
