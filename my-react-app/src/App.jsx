@@ -212,6 +212,7 @@
 // }
 
 // export default App
+import AI_intrigratin from "./AI_intrigratin";
 import "./App.css";
 import CustomFunction from "./CustomFunction";
 
@@ -220,7 +221,7 @@ import CustomFunction from "./CustomFunction";
 const App = () => {
   return (
     <div>
-      <CustomFunction/>
+      <AI_intrigratin/>
     </div>
   );
 };
