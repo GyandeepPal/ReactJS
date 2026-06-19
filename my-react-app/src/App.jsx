@@ -212,16 +212,17 @@
 // }
 
 // export default App
-import AI_intrigratin from "./AI_intrigratin";
+
 import "./App.css";
-import CustomFunction from "./CustomFunction";
+
 
 
 
 const App = () => {
   return (
     <div>
-      <AI_intrigratin/>
+      <input type="text" placeholder="Enter" />
+      <button>section</button>
     </div>
   );
 };
