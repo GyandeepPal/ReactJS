@@ -56,7 +56,7 @@ import './App.css'
 const AI_intrigratin = () => {
   let [Searchdata,setSearch]=useState('')
   let [ans,setans]=useState('')
-  let gen=new GoogleGenerativeAI("Enter your API Key")
+  let gen=new GoogleGenerativeAI("ENTER YOUR API KEY")
 
   async function search(){
     try{
