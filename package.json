@@ -3,6 +3,7 @@
     "@google/genai": "^2.8.0",
     "@google/generative-ai": "^0.24.1",
     "@tailwindcss/vite": "^4.3.1",
+    "bootstrap": "^5.3.8",
     "tailwindcss": "^4.3.1"
   }
 }
