@@ -21,11 +21,13 @@
 // export default App
 import React from 'react'
 import AI_intrigratin from './AI_intrigratin'
+import Gyan from './Gyan'
 
 const App = () => {
   return (
-    <div>
-      <AI_intrigratin/>
+    <div id='main'>
+     
+      <Gyan/>
     </div>
   )
 }
