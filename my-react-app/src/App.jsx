@@ -22,12 +22,15 @@
 import React from 'react'
 import AI_intrigratin from './AI_intrigratin'
 import Gyan from './Gyan'
+import NewsCard from './NewsCard'
+import NextToDo from './NextToDo'
 
 const App = () => {
   return (
-    <div id='main'>
+    <div >
      
-      <Gyan/>
+      <NextToDo/>
+     
     </div>
   )
 }
