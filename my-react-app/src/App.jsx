@@ -24,12 +24,13 @@ import AI_intrigratin from './AI_intrigratin'
 import Gyan from './Gyan'
 import NewsCard from './NewsCard'
 import NextToDo from './NextToDo'
+import Onchange from './Onchange'
 
 const App = () => {
   return (
     <div >
      
-      <NextToDo/>
+      <Onchange/>
      
     </div>
   )
