@@ -25,12 +25,13 @@ import Gyan from './Gyan'
 import NewsCard from './NewsCard'
 import NextToDo from './NextToDo'
 import Onchange from './Onchange'
+import UserProfile from './UserProfile'
 
 const App = () => {
   return (
     <div >
      
-      <Onchange/>
+      <UserProfile/>
      
     </div>
   )
